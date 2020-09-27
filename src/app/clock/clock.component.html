@@ -1,0 +1,18 @@
+<form #myForm="ngForm" (ngSubmit)="update(myForm)" role="form">
+<p style="font-size: 25px">Set united states time:</p><input type="text" ngModel id="utc" name="utc" placeholder="00:00:00">
+<input type="submit" name="submit" value="Submit">
+</form>
+<p style="font-size: 25px" id="demo">Unites States: <span>{{utctime}}</span>
+  <p style="font-size: 25px" id="demo1">India: <span>{{now}}</span>
+    <p style="font-size: 25px" id="demo2">London time: <span>{{london}}</span>
+
+      <form #myForm1="ngForm" (ngSubmit)="updateLondon(myForm1)" role="form">
+        <p style="font-size: 25px">Time difference for London:</p><input type="text" ngModel id="london" name="london" placeholder="6">
+        <input type="submit" name="submit" value="Submit">
+        </form>
+
+        <form #myForm2="ngForm" (ngSubmit)="updateIndia(myForm2)" role="form">
+          <p style="font-size: 25px">Time difference for India:</p><input type="text" ngModel id="india" name="india" placeholder="9">
+          <input type="submit" name="submit" value="Submit">
+          </form>
+  
